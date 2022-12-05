@@ -1,0 +1,20 @@
+[package]
+name = "advent2022"
+version = "0.1.0"
+edition = "2021"
+
+[dev-dependencies]
+criterion = "0.4.0"
+macros = { path = "../macros" }
+
+[dependencies]
+anyhow = "1.0.66"
+easy-ext = "1.0.1"
+enum-utils = "0.1.2"
+itertools = "0.10.5"
+nom = "7.1.1"
+substring = "1.4.5"
+
+[[bench]]
+name = "bench"
+harness = false
