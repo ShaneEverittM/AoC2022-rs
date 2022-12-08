@@ -18,3 +18,16 @@ test_day!(day1, Ok(66616), Ok(199172));
 test_day!(day2, Ok(14264), Ok(12382));
 test_day!(day3, 8185, 2817);
 test_day!(day4, 485, 857);
+
+#[cfg(test)]
+mod day5 {
+    #[test]
+    fn part1() {
+        assert!(matches!(crate::day5::part1().as_deref(), Ok("TWSGQHNHL")));
+    }
+
+    #[test]
+    fn part2() {
+        assert!(matches!(crate::day5::part2().as_deref(), Ok("JNRSCDWPP")));
+    }
+}

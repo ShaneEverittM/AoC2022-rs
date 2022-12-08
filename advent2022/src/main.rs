@@ -19,5 +19,9 @@ fn main() -> Result<()> {
     println!("\tPart 1, total overlaps: {}", day4::part1());
     println!("\tPart 2, partial overlaps: {}", day4::part2());
 
+    println!("Day 5:");
+    println!("\tPart 1, top of each stack: {}", day5::part1()?);
+    println!("\tPart 2, top of each stack: {}", day5::part2()?);
+
     Ok(())
 }

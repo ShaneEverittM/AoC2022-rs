@@ -9,6 +9,7 @@ macros = { path = "../macros" }
 
 [dependencies]
 anyhow = "1.0.66"
+derive_more = "0.99.17"
 easy-ext = "1.0.1"
 enum-utils = "0.1.2"
 itertools = "0.10.5"
