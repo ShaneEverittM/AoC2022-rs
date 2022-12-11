@@ -1,4 +1,4 @@
-use anyhow::Result;
+use anyhow::{Context, Result};
 
 use advent2022::*;
 
@@ -22,6 +22,16 @@ fn main() -> Result<()> {
     println!("Day 5:");
     println!("\tPart 1, top of each stack: {}", day5::part1()?);
     println!("\tPart 2, top of each stack: {}", day5::part2()?);
+
+    println!("Day 6:");
+    println!(
+        "\tPart 1, index of 4 unique: {}",
+        day6::part1().context("Could not find run of 4")?
+    );
+    println!(
+        "\tPart 2, index of 14 unique: {}",
+        day6::part2().context("Could not find run of 4")?
+    );
 
     Ok(())
 }

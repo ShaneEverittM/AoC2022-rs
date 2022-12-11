@@ -31,3 +31,5 @@ mod day5 {
         assert!(matches!(crate::day5::part2().as_deref(), Ok("JNRSCDWPP")));
     }
 }
+
+test_day!(day6, Some(1155), Some(2789));
