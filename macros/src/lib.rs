@@ -39,7 +39,7 @@ pub fn benchmark_days(input: TokenStream) -> TokenStream {
     let tokens = quote! {
         #(
             fn #part1_bench_idents(c: &mut criterion::Criterion) { c.bench_function(concat!("Day ", #days ," P1"), |b| b.iter(#mod_idents::part1)); }
-            fn #part2_bench_idents(c: &mut criterion::Criterion) { c.bench_function(concat!("Day ", #days ," P1"), |b| b.iter(#mod_idents::part2)); }
+            fn #part2_bench_idents(c: &mut criterion::Criterion) { c.bench_function(concat!("Day ", #days ," P2"), |b| b.iter(#mod_idents::part2)); }
         )*
 
         criterion::criterion_group!(
