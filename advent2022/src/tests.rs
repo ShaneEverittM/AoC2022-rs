@@ -34,3 +34,4 @@ mod day5 {
 
 test_day!(day6, Some(1155), Some(2789));
 test_day!(day7, Ok(1454188), Ok(4183246));
+test_day!(day8, Ok(1546), Ok(519064));

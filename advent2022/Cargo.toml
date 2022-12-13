@@ -17,6 +17,7 @@ enum-utils = "0.1.2"
 id_tree = "1.8.0"
 indexmap = "1.9.2"
 itertools = "0.10.5"
+ndarray = "0.15.6"
 nom = "7.1.1"
 substring = "1.4.5"
 

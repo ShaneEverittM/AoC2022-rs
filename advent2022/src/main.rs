@@ -33,15 +33,19 @@ fn main() -> Result<()> {
     //     day6::part2().context("Could not find run of 4")?
     // );
 
-    println!("Day 7:");
-    println!(
-        "\tPart 1, sum of directories smaller than 100000: {}",
-        day7::part1()?
-    );
-    println!(
-        "\tPart 2, size of directory to delete: {}",
-        day7::part2()?
-    );
+    // println!("Day 7:");
+    // println!(
+    //     "\tPart 1, sum of directories smaller than 100000: {}",
+    //     day7::part1()?
+    // );
+    // println!(
+    //     "\tPart 2, size of directory to delete: {}",
+    //     day7::part2()?
+    // );
+
+    println!("Day 8:");
+    println!("\tPart 1, number of visible trees: {}", day8::part1()?);
+    println!("\tPart 1, scenic score for perfect spot: {}", day8::part2()?);
 
     Ok(())
 }
