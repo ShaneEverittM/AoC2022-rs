@@ -43,9 +43,13 @@ fn main() -> Result<()> {
     //     day7::part2()?
     // );
 
-    println!("Day 8:");
-    println!("\tPart 1, number of visible trees: {}", day8::part1()?);
-    println!("\tPart 1, scenic score for perfect spot: {}", day8::part2()?);
+    // println!("Day 8:");
+    // println!("\tPart 1, number of visible trees: {}", day8::part1()?);
+    // println!("\tPart 2, scenic score for perfect spot: {}", day8::part2()?);
+
+    println!("Day 13:");
+    println!("\tPart 1, sum of out of order indices: {}", day13::part1()?);
+    println!("\tPart 2, produce of decoder indices: {}", day13::part2()?);
 
     Ok(())
 }

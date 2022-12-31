@@ -20,6 +20,8 @@ itertools = "0.10.5"
 ndarray = "0.15.6"
 nom = "7.1.1"
 substring = "1.4.5"
+serde = { version = "1.0.150", features = ["derive"] }
+serde_json = "1.0.89"
 
 [[bench]]
 name = "bench"
