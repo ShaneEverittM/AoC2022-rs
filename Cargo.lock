@@ -31,12 +31,15 @@ dependencies = [
  "id_tree",
  "indexmap",
  "itertools",
+ "js-sys",
  "macros",
  "ndarray",
  "nom",
  "serde",
  "serde_json",
  "substring",
+ "wasm-bindgen",
+ "web-sys",
 ]
 
 [[package]]

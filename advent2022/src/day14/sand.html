@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        html,
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        canvas {
+            image-rendering: pixelated;
+            height: 90vh;
+        }
+
+        .simulation {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        .status {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-width: 10px;
+            justify-content: space-around;
+            height: 12vh;
+            align-self: center;
+        }
+    </style>
+    <title>Falling Sand</title>
+</head>
+
+<body>
+
+<div class="simulation">
+    <div id="status" class="status">
+        <div id="settled">Settled: 0</div>
+        <button id="faster">+</button>
+        <button id="slower">-</button>
+        <button id="pause">Pause</button>
+    </div>
+    <canvas id="map"></canvas>
+</div>
+
+
+<script type="module">
+    import init, {Grid} from "./pkg/advent.js";
+
+    async function main() {
+        await init();
+
+        let grid = new Grid();
+        let delay = 10
+        let paused = false
+
+        document.getElementById("slower").onclick = () => {
+            delay += 25
+        }
+        document.getElementById("faster").onclick = () => {
+            if (delay - 25 <= 0) {
+                delay = 0
+            } else {
+                delay -= 25
+            }
+        }
+        document.getElementById("pause").onclick = () => {
+            paused = !paused
+        }
+
+        const whenDone = () => {
+            document.getElementById("status").appendChild(document.createElement("div")).textContent = "Done!"
+        }
+
+        let start
+        const draw = (timestamp) => {
+            if (start === undefined) {
+                start = timestamp
+            }
+            const elapsed = timestamp - start
+
+            let done = false
+            if (elapsed >= delay && !paused) {
+                start = undefined
+
+                grid.render("map");
+                done = grid.step()
+                document.getElementById("settled").innerText = `Settled: ${grid.num_settled()}`
+            }
+
+            if (!done) {
+                window.requestAnimationFrame(draw)
+            } else {
+                whenDone()
+            }
+        }
+
+        window.requestAnimationFrame(draw)
+
+    }
+
+    main();
+</script>
+</body>
+</html>
