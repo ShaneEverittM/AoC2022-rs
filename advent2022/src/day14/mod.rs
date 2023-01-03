@@ -4,12 +4,12 @@ use anyhow::Result;
 
 use wasm::Grid;
 
-fn parse_input() -> Grid {
-    Grid::parse(include_str!("../inputs/day14.txt"))
+fn parse_input(floor: bool) -> Grid {
+    Grid::parse(include_str!("../inputs/day14.txt"), floor)
 }
 
-pub fn part1() -> Result<usize> {
-    let mut grid = parse_input();
+fn run_sim(floor: bool) -> Result<usize> {
+    let mut grid = parse_input(floor);
     loop {
         let done = grid.step();
         if done {
@@ -20,6 +20,10 @@ pub fn part1() -> Result<usize> {
     Ok(grid.num_settled())
 }
 
+pub fn part1() -> Result<usize> {
+    run_sim(false)
+}
+
 pub fn part2() -> Result<usize> {
-    Ok(0)
+    run_sim(true)
 }

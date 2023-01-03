@@ -13,7 +13,7 @@
 
         canvas {
             image-rendering: pixelated;
-            height: 90vh;
+            height: 75vh;
         }
 
         .simulation {
@@ -54,7 +54,7 @@
     async function main() {
         await init();
 
-        let grid = new Grid();
+        let grid = new Grid(false);
         let delay = 10
         let paused = false
 
@@ -100,7 +100,6 @@
         }
 
         window.requestAnimationFrame(draw)
-
     }
 
     main();

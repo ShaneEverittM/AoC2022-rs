@@ -53,6 +53,7 @@ fn main() -> Result<()> {
 
     println!("Day 14:");
     println!("\tPart 1, grains until cave in: {}", day14::part1()?);
+    println!("\tPart 1, grains until cave full: {}", day14::part2()?);
 
     Ok(())
 }
