@@ -37,3 +37,4 @@ test_day!(day7, Ok(1454188), Ok(4183246));
 test_day!(day8, Ok(1546), Ok(519064));
 test_day!(day13, Ok(5825), Ok(24477));
 test_day!(day14, Ok(805), Ok(25161));
+test_day!(day15, Ok(5403290), Ok(10291582906626));

@@ -14,7 +14,6 @@ macros = { path = "../macros" }
 [dependencies]
 anyhow = "1.0.66"
 camino = "1.1.1"
-color-eyre = "0.6.2"
 derive_more = "0.99.17"
 easy-ext = "1.0.1"
 enum-utils = "0.1.2"
@@ -23,6 +22,8 @@ indexmap = "1.9.2"
 itertools = "0.10.5"
 ndarray = "0.15.6"
 nom = "7.1.1"
+num-traits = "0.2.15"
+rayon = "1.6.1"
 substring = "1.4.5"
 serde = { version = "1.0.150", features = ["derive"] }
 serde_json = "1.0.89"
