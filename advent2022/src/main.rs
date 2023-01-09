@@ -55,9 +55,13 @@ fn main() -> Result<()> {
     // println!("\tPart 1, grains until cave in: {}", day14::part1()?);
     // println!("\tPart 2, grains until cave full: {}", day14::part2()?);
 
-    println!("Day 15:");
-    println!("\tPart1, covered squares at row 10: {}", day15::part1()?);
-    println!("\tPart2, tuning frequency: {}", day15::part2()?);
+    // println!("Day 15:");
+    // println!("\tPart 1, covered squares at row 10: {}", day15::part1()?);
+    // println!("\tPart 2, tuning frequency: {}", day15::part2()?);
+
+    println!("Day 16:");
+    println!("\tPart 1, max pressure released: {}", day16::part1()?);
+    println!("\tPart 1, max pressure released with elephant: {}", day16::part2()?);
 
     Ok(())
 }
